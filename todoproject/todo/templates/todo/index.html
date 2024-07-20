@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Priority To-Do</title>
+</head>
+<body>
+    <h1>Priority To-Do</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ forloop.counter }} - {{ task.description }} - prioridade {{ task.priority }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_task' %}">Add new task</a>
+</body>
+</html>
